@@ -1,0 +1,23 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /spring-boot-security-jwt
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt-security-db
+    username: root
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+
+jwt:
+  issuer: spring-boot-security-jwt
+  secret-key: 3272357538782F413F4428472B4B6250655368566B5970337336763979244226
